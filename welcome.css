@@ -1,0 +1,272 @@
+.ok{
+    width: 320px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
+    }
+
+    html{
+        cursor: url(SOP-Normal.cur),auto;
+        
+    }
+
+    body{
+
+        background-color: black;
+        overflow-y: hidden;
+  
+        
+
+    }
+    .activity{
+       height: 100vh;
+        width: 100%;
+        background-image: url(desk_rw_bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        -webkit-perspective: 100px;
+        perspective: 100px;
+        -webkit-perspective-origin: 0 0;
+        perspective-origin: 0 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        
+        
+    }
+
+    .activity, .content{
+        width:100%;
+        min-height: 100vh;
+        /* position: relative; */
+        transform-style: preserve-3d;
+      }
+
+    .activity::before {
+        content:"";
+        width:100%;
+        height: 100%;
+        /* position: absolute; */
+        
+        background-size: cover;
+        transform: translateZ(-1px) scale(2.2);
+        filter: blur(2px);
+      }
+      .activity::after {
+        content:"";
+        width:100%;
+        height: 100%;
+        /* position: absolute; */
+        
+        background-size: cover;
+      }
+
+      .moon{
+        
+      }
+      
+    .moon img{
+        /* transform: translateZ(-2px) scale(0.5);
+        z-index: -1; */
+        margin-left: 10%;
+        animation: animName 20s linear infinite;
+    }
+
+    .moon-text{
+      opacity: 0;
+      color: aliceblue;
+      display: inline-block;
+      vertical-align: top;
+      padding-top: 5%;
+      margin-left: 7%;
+      
+    }
+
+    .moon:hover .moon-text{
+
+      transition: all .5s;
+    transform: scale(1.1);
+    opacity: 1;
+    
+    }
+    .moon:hover {
+
+      transition: all .5s;
+    transform: scale(1.1);
+    opacity: 1;
+    
+    }
+
+
+    .blue:hover{
+
+      transition: all .5s;
+    transform: scale(1.1);
+    }
+
+    .blue-text{
+      opacity: 0;
+      color: aliceblue;
+      display: inline-block;
+      vertical-align: top;
+      padding-top: 3.5%;
+      margin-left: 5%;
+      
+    }
+    .blue:hover .blue-text{
+
+      transition: all .5s;
+    transform: scale(1.1);
+    opacity: 1;
+    
+    }
+
+    .purple{
+      
+    }
+    .purple:hover{
+
+      transition: all .5s;
+    transform: scale(1.1);
+    }
+
+    .purple-text{
+      opacity: 0;
+      color: aliceblue;
+      display: inline-block;
+      vertical-align: bottom;
+      padding-left: 15%;
+      padding-top: 3.5%;
+      
+      
+    }
+    .purple:hover .purple-text{
+
+      transition: all .5s;
+    transform: scale(1.1);
+    opacity: 1;
+    
+    }
+    .purple img{
+        
+        margin-left: 70%;
+        margin-right: 5%;
+        animation: animName 25s linear infinite;
+        margin-top: -111px;
+    }
+    .blue img{
+        margin-left: 25%;
+        animation: animName 27s linear infinite;
+        margin-top: -40px;
+    }
+
+
+
+
+    .content{
+        /* margin-left: 15%; */
+        
+        position:absolute;
+        margin-top: 10%;
+        margin-bottom: 15%;
+        text-align: center;
+        /* text-justify: auto; */
+        font-family: 'Indie Flower', cursive;
+        font-size: 25px;
+
+    }
+    
+    .content p{
+        margin-left : 5%;
+        margin-right: 5%;
+        
+    }
+
+    .content h1{
+        margin-bottom: 5%;
+    }
+
+    @keyframes animName {
+        from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(359deg);
+          }
+       }
+
+
+
+
+       /* navabar code stuff */
+       /* Navbar styles */
+.navbar {
+    background-color: #111;
+    height: 50px;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+  }
+  
+  .navbar-logo img {
+    height: 40px;
+  }
+  
+  .navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar-list li {
+    margin-left: 80px;
+  }
+  
+  .navbar-list li:first-child {
+    margin-left: 0;
+  }
+  
+  .navbar-list li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-list li a:hover {
+    color: #ffcc00;
+  }
+  
+  /* Media queries for responsiveness */
+  @media screen and (max-width: 768px) {
+    .navbar-list {
+      display: none;
+    }
+    
+    .navbar-container {
+      justify-content: center;
+    }
+    
+    .navbar-logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .navbar-list li {
+      display: block;
+      margin: 10px 0;
+    }
+    
+    .navbar.hidden .navbar-list {
+      display: flex;
+    }
+  }
+  
